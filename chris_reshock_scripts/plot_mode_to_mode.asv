@@ -1,0 +1,15 @@
+[Tuub1,Tccb1,Tuum1,Tccm1,Tuut1,Tcct1] = chris_exp_mode_to_mode(1);
+[Tuub2,Tccb2,Tuum2,Tccm2,Tuut2,Tcct2] = chris_exp_mode_to_mode(0);
+[Tuub3,Tccb3,Tuum3,Tccm3,Tuut3,Tcct3] = chris_exp_mode_to_mode(0);
+[Tuub4,Tccb4,Tuum4,Tccm4,Tuut4,Tcc41] = chris_exp_mode_to_mode(0);
+
+figure
+
+subplot(4,3,1)
+pcolor([0.02:0.02:0.4],[0.02:0.02:0.4],nanmean(Tuut1,3))
+
+subplot(4,3,2)
+pcolor([0.02:0.02:0.4],[0.02:0.02:0.4],nanmean(Tuum1,3))
+
+subplot(4,3,3)
+pcolor([0.02:0.02:0.4],[0.02:0.02:0.4],nanmean(Tuub1,3))
