@@ -1,5 +1,21 @@
 function [C,eta,x,delta,y0,delta2,y02] = chris_C(C)
     
+    %%%%%%%%%%%%%%%%%%%%%
+    %
+    %   Input:
+    %   C - 2d slice of the mole fracion field
+    %   
+    %   Output:
+    %   C - clipped output at 0 and 1
+    %   eta - (z-z0)/delta
+    %   x - x coordinate in px
+    %   delta - mixing width in px (curve fit)
+    %   y0 - mixing layer centroid (curve fit)
+    %   delta2 - mixing width in px (integral)
+    %   y02 - mixing layer centroid (integral)
+    %
+    %%%%%%%%%%%%%%%%%%%%%
+
     C(C>1)=1;
     C(C<0)=0;
      

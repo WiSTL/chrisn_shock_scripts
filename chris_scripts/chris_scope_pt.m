@@ -1,5 +1,14 @@
 function [xloc,pt,pt_t,t,xt,ts,trs,Ws,Wt,Wr,Ms,Wsv] = chris_scope_pt(fn,vars)
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Reads lvm files from the scope program,
+%   normalises pressure transducer data
+%   smooths data and calculates derivatives and
+%   estimates wave speeds.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 pt=dlmread(fn,'\t',[23 1 40022 12]);
 
 for i = 1:12

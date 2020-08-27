@@ -10,8 +10,7 @@ function [Sx,rx,dA,Am] = chris_no_structure_fn(A,n,dpxdx)
     %   Outputs:
     %   Sx(z,rx) - Structure function calculated in homogeneous direction
     %   rx - seperation vector
-    %   dA(z,x,rx) - unaveraged difference 
-    %   Am(z,x,rx) - unaveraged mean
+    %   dA(z,x,rx) - unaveraged  
     %
     %%%%%%%%%%%%%%%%%%%%
 

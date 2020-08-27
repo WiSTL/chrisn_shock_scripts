@@ -1,10 +1,12 @@
 function [M] = chris_shock_dynamics(C,MWa,MWb,ga,gb,M0)
 
-% ga = 1.503;
-% gb = 1.664;
-% 
-% MWa = 8.059;
-% MWb = 39.95;
+%%%%%%%%%%%%%%%%%%%
+%
+%   Uses the equations of shock dynamics to approximate the 
+%   strength of the shock as it traverses an interface from gas a
+%   to gas b with C being the spanwise averaged mole fraction of gas a
+%
+%%%%%%%%%%%%%%%%%%%
 
 dMW = MWa - MWb;
 

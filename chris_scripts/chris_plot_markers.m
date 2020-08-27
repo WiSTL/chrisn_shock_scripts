@@ -1,5 +1,12 @@
 function chris_plot_markers(x,y,z)
 
+%%%%%%%%%%%%%%%%%%%%%
+%
+%   Creates marker plot of F=F(x,y) where the size and colour of 
+%   the marker at the point (x,y) denotes the value of F
+%
+%%%%%%%%%%%%%%%%%%%%%
+
 dx = nanmean(abs(diff(x)));
 dy = nanmean(abs(diff(y)));
 
