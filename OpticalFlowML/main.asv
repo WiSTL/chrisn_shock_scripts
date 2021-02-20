@@ -1,0 +1,46 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Generate Input Images
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+nx = 10;
+ny = 10;
+x = 1:nx;
+y = 1:ny;
+
+[Y,X] = meshgrid(y,x);
+
+I(:,:,1) = X.^2 + Y.^2;
+I(:,:,1) = I(:,:,1)/max(I(:));
+
+I(:,:,2) = squeeze(I(:,:,1))+X;
+I(:,:,2) = I(:,:,2)/max(I(:));
+
+I(:,:,3) = squeeze(I(:,:,1))+Y;
+I(:,:,3) = I(:,:,3)/max(I(:));
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Genetic Algorithm Inputs
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+nn = 10; %number of nodes
+nl = 5; %number of layers
+
+nb = 10; %number of bots
+ng = 100; %number of generations
+
+for i = 1:nb
+    [W,B] = chris_GenerateRandomWeights(nn,nl);
+    bot{i}.W = W;
+    bot{i}.B = B;
+    
+    [O] = chris_NeuralNet(I,W,B);
+    bot{i}.O = O;
+    
+    bot{i}.score = sum(0*O+0.
+end
+
